@@ -5,17 +5,150 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+
 }
 
+.grid-container {
+  height: 100vh;
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 60px 70px 1fr;
+ grid-template-areas:
+ "head"
+ "nav"
+ "main";
+ }
+
+header {
+  grid-area: head;
+  background: purple;
+  overflow: auto;
+  }
+
+nav {
+  grid-area: nav;
+  background: darkgray;
+}
+
+main {
+  grid-area: main;
+}
+
+/* DASH-TOP */
+
+.dash-top {
+ background: gray;
+ height: 100px;
+}
+
+/* CHART SECTION */
+
+.full-size-chart {
+  background: red;
+  height: 500px;
+}
+.half-size-charts {
+  background: blue;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 5px;
+}
+.chart-1,
+.chart-2 {
+  height: 100%;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.chart-1 {
+  background: yellow;
+}
+.chart-2 {
+ background: orange;
+}
+
+/* SOCIAL MEDIA */
+.social-media-info {
+	height: auto;
+	background: green;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+.social-1, .social-2, .social-3 {
+	width: 100%;
+	background: white;
+	height: 200px;
+	margin: 5px 0px;
+}
+
+/* MEMBER INFO */
+.member-info {
+	display: flex;
+	height: auto;
+	flex-direction: column;
+	align-items: center;
+	background: pink;
+	padding: 5px;
+}
+.members-1, .members-2 {
+	background: white;
+	height: 300px;
+	width: 100%;
+	margin: 5px 0px;
+}
+
+/* MESSAGE AND SETTINGS */
+.message-and-settings {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: yellow;
+	padding: 5px;
+	height: auto;
+}
+.message, .settings {
+  background: white;
+  height: 300px;
+  width: 100%;
+  margin: 5px 0px;
+}
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 320px) {
-}
-
 @media only screen and (min-width: 768px) {
+	.grid-container {
+		grid-template-rows: 70px 80px 1fr;
+	}
+}
+@media only screen and (min-width: 1024px) {
+
+  .grid-container {
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas:
+  "head head"
+  "nav main"
 }
 
-@media only screen and (min-width: 1024px) {
+.half-size-charts,
+.social-media-info,
+.member-info,
+.message-and-settings {
+  flex-direction: row;
+}
+.chart-1, .chart-2,
+.social-1, .social-2, .social-3,
+.members-1, .members2,
+.message, .setting {
+  margin: 0 5px;
+}
 
 }
