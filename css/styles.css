@@ -22,14 +22,28 @@
  }
 
 header {
+  display: flex;
+  flex-direction: row;
   grid-area: head;
   background: purple;
-  overflow: auto;
+  display: flex;
+  flex-basis: 0;
+  align-items: center;
+  padding: 5px 15px 5px 10px;
+  color: white;
   }
+
 
 nav {
   grid-area: nav;
   background: darkgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav svg {
+  margin: auto;
 }
 
 main {
@@ -39,19 +53,94 @@ main {
 /* DASH-TOP */
 
 .dash-top {
+  display: flex;
+  flex-direction: row;
  background: gray;
- height: 100px;
+ height: 50px;
+}
+
+.headline {
+  margin: auto auto auto 15px;
+  color: white;
+
+}
+
+.searchbar {
+    margin: auto 15px auto auto;
+}
+
+/* ALERT */
+
+.alert-banner {
+    height: 80px;
+    background-color: purple;
+    border-radius: 2px;
+    padding: 5px 2rem 0 20px;
+    margin: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.alert-banner strong {
+    padding-right: 5px;
+}
+
+.alert-banner p:first-child {
+    margin-right: auto;
+}
+
+
+/* GRAPHS */
+
+.linechart {
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 10px;
+      margin-right: 50px;
+
+}
+
+.traffic-nav-link {
+    padding-bottom: 10px;
+    margin-right: 15px;
+}
+
+.traffic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.traffic-header h3 {
+ font-size: 1em;
+}
+
+.traffic-nav {
+    list-style-type: none;
+    display: flex;
+}
+
+
+.traffic-nav  {
+    margin-right: 10px;
+}
+
+.traffic-nav-link:hover {
+      color: purple;
+      font-style: bold;
 }
 
 /* CHART SECTION */
 
 .full-size-chart {
-  background: red;
-  height: 500px;
+  height: auto;
 }
+
 .half-size-charts {
-  background: blue;
-  height: 500px;
+  height: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -63,14 +152,14 @@ main {
   height: 100%;
   width: 100%;
   margin: 5px 0;
+  border: 1px solid black;
 }
 
-.chart-1 {
-  background: yellow;
-}
-.chart-2 {
- background: orange;
-}
+
+.heading {
+  padding-left: 10px;
+  padding-bottom: 15px;
+  }
 
 /* SOCIAL MEDIA */
 .social-media-info {
@@ -83,6 +172,9 @@ main {
 	padding: 5px;
 }
 .social-1, .social-2, .social-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 	width: 100%;
 	background: white;
 	height: 200px;
@@ -121,6 +213,84 @@ main {
   margin: 5px 0px;
 }
 
+/* HEADER */
+
+header h3 {
+    margin-right: auto;
+    margin-left: 10px;
+  }
+
+header svg {
+
+    margin-left: auto;
+    display: block;
+    width: 100%;
+    margin-right: 25px;
+}
+
+header img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+  /* ICONS */
+
+  .bell {
+    height: 2.5rem;
+    width: 2rem;
+    margin-left: auto;
+    position: relative;
+    }
+
+    .st0 {
+        transition: .3s ease-out;
+    }
+
+    .st0:hover {
+        fill: gold;
+    }
+
+    .social-icon {
+      height: 60px;
+      width: 60px;
+      margin-top: 25px;
+      margin-bottom: auto;
+      margin-left: 30px;
+      margin-right: 40px;
+    }
+
+    .side-icon {
+      height: 3rem;
+      width: 2rem;
+    }
+
+    .social-icon svg {
+      border-radius: 20%;
+      background-color: purple;
+        height: 70px;
+        width: 70px;
+        padding: 10px;
+      }
+
+
+    .social-stats {
+      margin-bottom: auto;
+    }
+
+
+    .makewhite {
+      fill: white;
+      }
+
+
+  .profile-image {
+    margin: auto;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: 25px;
+  }
+
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 768px) {
@@ -144,6 +314,17 @@ main {
 .message-and-settings {
   flex-direction: row;
 }
+
+nav {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav svg {
+  margin: 25px 0 0 0;
+  }
+
 .chart-1, .chart-2,
 .social-1, .social-2, .social-3,
 .members-1, .members2,
