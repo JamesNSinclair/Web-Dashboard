@@ -301,8 +301,7 @@ main {
     color: black;
     padding: 10px;
     margin-bottom: 10px;
-    font-size: .7em;
-}
+    }
 
 .widget-container input::placeholder{
     font-family: 'Roboto';
