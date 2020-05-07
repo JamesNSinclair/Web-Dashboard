@@ -163,7 +163,6 @@ main {
 /* SOCIAL MEDIA */
 .social-media-info {
 	height: auto;
-	background: green;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -175,7 +174,8 @@ main {
   flex-direction: column;
   align-items: center;
 	width: 100%;
-	background: white;
+	background: lightgrey;
+  border: 2px solid grey;
 	height: 200px;
 	margin: 5px 0px;
 }
